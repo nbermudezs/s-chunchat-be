@@ -1,6 +1,7 @@
 {
   "name":"strong-chunchat-backend",
   "scripts":{
+    "predeploy": "sed -i.bak s/MONGOLAB_URI/$MONGOLAB_URI/g datasources.json",
     "postdeploy": "sed -i.bak s/MONGOLAB_URI/$MONGOLAB_URI/g datasources.json"
   },
   "env":{},

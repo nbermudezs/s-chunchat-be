@@ -6,6 +6,7 @@
   },
   "main": "server/server.js",
   "scripts": {
+    "predeploy": "sed -i.bak s/MONGOLAB_URI/$MONGOLAB_URI/g datasources.json",
     "pretest": "jshint ."
   },
   "dependencies": {
